@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        /* Questions Section */
+        .questions-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Section Heading */
+        .section-heading {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Questions List */
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Question Item */
+        .question-item {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .question-item.active {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Question Button */
+        .question-button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            transition: background-color 0.2s ease;
+        }
+
+        .question-button:hover {
+            background-color: #f8fafc;
+        }
+
+        .question-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .question-icon {
+            color: #64748b;
+            transition: transform 0.3s ease;
+            font-size: 14px;
+        }
+
+        .question-item.active .question-icon {
+            color: #3b82f6;
+            transform: rotate(180deg);
+        }
+
+        /* Answer Content */
+        .answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f8fafc;
+        }
+
+        .question-item.active .answer-content {
+            max-height: 300px; /* Adjust this value based on your content */
+        }
+
+        .answer-text {
+            padding: 0 24px 20px 24px;
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .questions-section {
+                padding: 40px 16px;
+            }
+            
+            .section-heading {
+                font-size: 30px;
+            }
+            
+            .question-button {
+                padding: 18px 20px;
+                font-size: 15px;
+            }
+            
+            .answer-text {
+                padding: 0 20px 18px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .questions-section {
+                padding: 32px 12px;
+            }
+            
+            .section-heading {
+                font-size: 26px;
+            }
+            
+            .question-button {
+                padding: 16px 18px;
+                font-size: 14px;
+            }
+            
+            .question-text {
+                padding-right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FAQ Section -->
+    <section class="questions-section">
+        <div class="questions-container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            
+            <div class="questions-list">
+                <!-- Question 1 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">How can I open a savings account with your bank?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: Answer text will go here. You can replace this with your actual answer. This is just sample content for the dropdown.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">What is the minimum initial deposit required to open a savings account?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: This is sample answer content. Replace with your bank's policy about minimum deposit requirements.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">Does the Moniepoint Personal Bank Account have a minimum balance requirement?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: Sample answer about minimum balance. You'll update this with your specific account requirements.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">Are there any monthly maintenance fees associated with the savings account?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: This is placeholder text about fees. Update with your actual fee structure.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">Are there any restrictions or penalties for withdrawing money from my account?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: Sample answer about withdrawal restrictions and penalties.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">Can I set up automatic transfers or direct deposits into my savings account to help with saving?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: Information about automatic transfers and direct deposits will go here.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">What are the options for receiving statements and monitoring account activity?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: Sample text about statement options and account monitoring features.]</p>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-item">
+                    <button class="question-button">
+                        <span class="question-text">Is my money safe with Moniepoint?</span>
+                        <span class="question-icon"><i class="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div class="answer-content">
+                        <p class="answer-text">[PLACEHOLDER: This is a safety and security answer. Update with your bank's security measures and insurance details.]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ Dropdown Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionButtons = document.querySelectorAll('.question-button');
+            
+            questionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Toggle active class on the parent question-item
+                    const questionItem = this.parentElement;
+                    const isActive = questionItem.classList.contains('active');
+                    
+                    // Close all questions first
+                    document.querySelectorAll('.question-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // If the clicked question wasn't active, open it
+                    if (!isActive) {
+                        questionItem.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

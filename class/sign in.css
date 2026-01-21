@@ -1,0 +1,478 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #edeff2 50%, #f5f5f5  50%);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.main-header {
+    padding: 1.5rem 2rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.login-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left Content */
+.left-content {
+    padding-top: 3rem;
+}
+
+.welcome-section {
+    margin-bottom: 2rem;
+    margin-left: -50px;
+}
+
+.welcome-title {
+    font-family: "kamona""inter",sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 56.64px;
+    color: rgb(1, 2, 5);
+    margin-bottom: 1.5rem;
+    margin-top: -50px;
+}
+
+.welcome-text {
+    font-family: Inter;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 22.14px;
+    color: rgb(1, 2, 5);
+    width: 400px;
+}
+
+/* License Section - Plain Text */
+.license-section {
+    margin-top: 9rem;
+    margin-left: -50px;
+}
+
+.license-text {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    max-width: 500px;
+}
+
+.license-text strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Right Form - SMALL VERSION */
+.right-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin-left: -90px;
+}
+
+.form-container {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    width: 700px;
+    max-width: 500px;
+}
+
+.form-title {
+    font-family: "kamona""inter",sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 20.64px;
+    color: rgb(1, 2, 5);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-subtitle {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.56px;
+    color: rgb(59, 68, 84);
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+/* Phone Input */
+.phone-input-section {
+    margin-bottom: 1.25rem;
+}
+
+.country-code-box {
+    display: inline-block;
+    padding: 0.625rem 1rem;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.phone-input {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.phone-input::placeholder {
+    color: #999;
+}
+
+/* Terms Section */
+.terms-section {
+    margin-bottom: 1.25rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: #1976d2;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    color: #666;
+    line-height: 1.3;
+    font-size: 1rem;
+    flex: 1;
+    text-align: left;
+}
+
+.checkbox-label strong {
+    color: #1976d2;
+    cursor: pointer;
+}
+
+/* Continue Button */
+.continue-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #1565c0;
+}
+
+/* ======================================
+   MOBILE RESPONSIVE (Setup Profile Only)
+   ====================================== */
+
+/* Mobile screens - Show only form, hide left content */
+@media screen and (max-width: 768px) {
+    body {
+        background: #f5f5f5; /* Solid background on mobile */
+    }
+    
+    /* Hide left content completely on mobile */
+    .left-content {
+        display: none;
+    }
+
+    
+    /* Make container full screen */
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 20px;
+    }
+    
+    /* Center the form on mobile */
+    .right-form {
+        margin-left: 0;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin-left: -40px;
+        margin-top: -90px;
+    }
+    
+    /* Form styling for mobile */
+    .form-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+    }
+    
+    /* Header adjustments for mobile */
+    .main-header {
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    /* Reduce logo size on mobile */
+    .logo {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .login-link {
+        display: none;
+    }
+    
+    /* Form text adjustments */
+    .form-title {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .form-subtitle {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Adjust button for mobile */
+    .continue-btn {
+        padding: 0.875rem;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    /* Adjust checkboxes for mobile */
+    .checkbox-label {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+/* ======================================
+   TABLET RESPONSIVE (Keep Normal Layout)
+   ====================================== */
+
+/* Tablet screens (768px - 1024px) - Keep normal layout */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Prevent overflow */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    /* Adjust container width */
+    .content-container {
+        max-width: 100%;
+        padding: 0 20px;
+        gap: 3rem;
+    }
+    
+    /* Adjust left content */
+    .welcome-section {
+        margin-left: 0;
+    }
+    
+    .welcome-title {
+        font-size: 38px;
+        line-height: 46px;
+        margin-top: 0;
+    }
+    
+    .welcome-text {
+        width: 100%;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .license-section {
+        margin-top: 6rem;
+        margin-left: 0;
+    }
+
+    
+    /* Adjust form for tablet */
+    .right-form {
+        margin-left: 0;
+    }
+    
+    .form-container {
+        width: 800px;
+        padding: 1.75rem;
+    }
+}
+
+/* ======================================
+   SMALL MOBILE OPTIMIZATION
+   ====================================== */
+
+/* Very small mobile screens (under 480px) */
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+        max-width: 350px;
+    }
+    
+    .form-title {
+        font-size: 20px;
+    }
+    
+    .form-subtitle {
+        font-size: 13px;
+    }
+    
+    .checkbox-label {
+        font-size: 13px;
+    }
+    
+    .phone-input,
+    .country-code-box {
+        padding: 0.75rem;
+        font-size: 14px;
+    }
+    
+    .continue-btn {
+        padding: 0.875rem;
+        font-size: 15px;
+    }
+}
+
+/* ======================================
+   FIX FOR VERY SMALL SCREENS
+   ====================================== */
+
+@media screen and (max-width: 320px) {
+    .form-container {
+        padding: 1.25rem;
+        max-width: 500px;
+    }
+    
+    .form-title {
+        font-size: 18px;
+    }
+    
+    .checkbox-item {
+        gap: 0.4rem;
+    }
+    
+    .checkbox {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* ======================================
+   PREVENT OVERFLOW ON ALL DEVICES
+   ====================================== */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure text doesn't overflow */
+p, h1, h2, h3, h4, h5, h6, span, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

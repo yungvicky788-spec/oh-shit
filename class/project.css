@@ -1,0 +1,1921 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: rgb(247, 249, 252);
+}
+
+/* Header Styles */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1000;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    height: 30px;
+}
+.logo img {
+    display: flex;
+    vertical-align: middle;
+    height: 30px;
+    width: auto;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    font-family: "Inter var", sans-serif;
+    font-size: 15.1778px;
+    font-weight: 500;
+    line-height: 19.7311px;
+    color: rgb(59, 85, 139);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    white-space: nowrap;
+    padding: 8px 12px;
+    border-radius: 18px;
+}
+
+.nav-button:hover {
+    color: #0066ff;
+    background-color: #c2e8fc;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    font-family: Arial;
+    font-size: 15.1778px;
+    font-weight: 500;
+    line-height: 19.7311px;
+    color: rgb(62, 88, 142);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 18px;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #0066ff;
+    background-color: #c2e8fc;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    margin-left: 2px;
+    opacity: 0.7;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-link:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.item-icon {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.item-description {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.utils-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.country-changer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.country-changer:hover {
+    border-color: #0066ff;
+}
+
+.country-flag {
+    font-size: 16px;
+}
+
+.country-flag img {
+    width: 20px;
+    height: 15px;
+}
+
+.country-arrow {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.signin-btn {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 7px 13px;
+    background-color: #c2e8fc;
+    border-radius: 18px;
+}
+
+.signin-btn:hover {
+    color: #0066ff;
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 40px;
+    background-color: #f8fafd;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: #fff0c2;
+    color: #012b8c;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: Aventa-ExtraBold, sans-serif;
+    font-size: 53.1222px;
+    font-weight: 400;
+    line-height: 66.4028px;
+    color: rgb(3, 19, 53);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-family: "Inter var", sans-serif;
+    font-size: 18.9722px;
+    font-weight: 500;
+    line-height: 26.3714px;
+    color: rgb(62, 88, 142);
+    width: 550px;
+    margin-bottom: 30px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.app-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.app-button:hover {
+    transform: scale(1.05);
+}
+
+.app-store-img, .play-store-img {
+    height: 50px;
+    width: auto;
+}
+
+
+.trust-title {
+    font-family: Aventa-SemiBold, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    color: rgb(3, 40, 88);
+}
+
+.trust-badges {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.trust-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-top: -60px;
+    margin-left: -18px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+.benefits-section {
+    padding: 80px 40px;
+    background-color: rgb(247, 249, 252);
+}
+
+.benefits-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.benefits-content {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.benefits-left {
+    position: sticky;
+    flex: 1;
+    padding-top: 60px;
+    z-index: 100;
+}
+
+.benefits-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #0066ff, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.get-started-btn {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    padding: 18px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.get-started-btn:hover {
+    background-color: #0052cc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.3);
+}
+
+.benefits-right {
+    flex: 1.5;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.benefit-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.benefit-card {
+    background-color: white;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+}
+
+.benefit-card-title {
+    font-family: Aventa-Bold, sans-serif;
+    font-size: 26.5611px;
+    font-weight: bold;
+    line-height: 34.5294px;
+    color: rgb(9, 34, 86);
+    margin-bottom: 15px;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.benefit-card-description {
+    font-family: "Inter var", sans-serif;
+    font-size: 15.1778px;
+    font-weight: 400;
+    line-height: 23.6773px;
+    color: rgb(9, 34, 86);
+    width: 400px;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+
+.benefit-img {
+    width: 450px;
+    height: 200px;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+}
+
+
+.benefits-grid-second {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.benefit-column-second {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.benefit-card-second {
+    background-color: white;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+}
+
+.benefit-card-title-second {
+    font-family: Aventa-Bold, sans-serif;
+    font-size: 26.5611px;
+    font-weight: bold;
+    line-height: 34.5294px;
+    color: rgb(9, 34, 86);
+    margin-bottom: 15px;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.benefit-card-description-second {
+    font-family: "Inter var", sans-serif;
+    font-size: 15.1778px;
+    font-weight: 400;
+    line-height: 23.6773px;
+    color: rgb(9, 34, 86);
+    width: 400px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+
+.benefit-img-second {
+    width: 450px;
+    height: 200px;
+    border-end-end-radius: 20px;
+    border-end-start-radius: 20px;
+}
+
+body{
+    height:200vh; /* for scrolling demo */
+  }
+
+  .steps-wrapper{
+    width:100%;
+    padding:100px 40px;
+    background:rgb(237, 240, 245);
+  }
+
+  .steps{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1100px;
+    margin:auto;
+  }
+
+  /* CENTER THE LINE PERFECTLY */
+  .line{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%); /* ✔️ puts line exactly at center of circles */
+    left:0;
+    width:100%;
+    height:4px;
+    background:#d1d9ec;
+    border-radius:20px;
+    z-index:1;
+  }
+
+  /* BLUE PROGRESS FIX */
+  .line::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:4px;
+    width:var(--progress, 0%); /* ✔️ 0 to 100% */
+    background:#0066ff;
+    border-radius:20px;
+    transition:width 0.35s ease;
+  }
+
+  .step{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    width:25%;
+  }
+
+.circle{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+    background:#fff;
+    border:4px solid #dce3f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:600;
+    color:#1a1f36;
+    margin:auto;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:border-color .3s ease, color .3s ease;
+}
+
+.step.active .circle{
+    border-color:#0066ff;
+    color:#0066ff;
+}
+
+.account-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 40px;
+  background: rgb(237, 240, 245);
+}
+
+.account-title {
+  font-family: Aventa-Bold, sans-serif;
+    font-size: 37.9444px;
+    font-weight: bolder;
+    line-height: 42.4978px;
+    color: rgb(9, 34, 86);
+  margin: 0;
+}
+
+.account-image-box {
+  width: 60px;
+  height: 60px;
+  background: #0066ff;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.account-image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Additional Services Section */
+.additional-services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: rgb(247, 249, 252);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Services Header */
+.services-header {
+    text-align: center;
+}
+
+.section-main-title {
+    font-family: Aventa-ExtraBold, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26.88px;
+    color: rgb(9, 34, 86);
+    margin-bottom: -26px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    margin-left: -50px;
+    margin-top: 100px;
+}
+
+.section-subtitle {
+    font-family: "Inter var", sans-serif;
+    font-size: 22.7667px;
+    font-weight: 500;
+    line-height: 29.8243px;
+    color: rgb(62, 88, 142);  
+    margin-left: -50px;
+    margin-bottom: -10px;  
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 100px;
+    margin-left: -60px;
+}
+
+/* Service Card */
+.service-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    width: 420px
+}
+
+
+/* Card Header */
+.card-header {
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    /* flex-shrink: 0; */
+    width: 56px;
+    height: 56px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.card-icon img {
+    width: 90px;
+    height: 90px;
+    margin-top: -10px;
+}
+
+.card-title {
+    font-family: Aventa-ExtraBold, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 31.418px;
+    color: rgb(3, 19, 53);
+    line-height: 1.4;
+    margin-top: 50px;
+    width: 350px;
+}
+
+/* Card Description */
+.card-description {
+    font-family: "Inter var", sans-serif;
+    font-size: 18.9722px;
+    font-weight: 500;
+    line-height: 24.8536px;
+    color: rgb(62, 88, 142);
+    margin-top: 16px;
+    width: 360px;
+}
+
+/* Trust Section */
+.trust-padd {
+    width: 100%;
+    padding: 120px 20px;
+    background: radial-gradient(circle at center, #05215D 0%, #011233 70%, #000E2A 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-height: 400px;
+}
+
+.trust-content h2 {
+    font-family: Aventa-ExtraBold, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 42.4978px;
+    color: rgb(255, 255, 255);
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.trust-content h2 span {
+    color: #FBE8A6; /* soft golden color like screenshot */
+}
+
+.trust-btn {
+    background: white;
+    color: #0A183F;
+    padding: 14px 34px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.trust-btn:hover {
+    background: #e5e5e5;
+}
+
+.questions-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Section Heading */
+        .section-heading {
+            font-family: Aventa-Bold, sans-serif;
+            font-size: 55px;
+            font-weight: 600;
+            line-height: 53.1222px;
+            color: rgb(9, 34, 86);
+            text-align: center;
+            margin-bottom: 70px;
+            margin-top: 30px;
+        }
+
+        /* Questions List */
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Question Item */
+        .question-item {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+        }
+
+
+        /* Question Button */
+        .question-button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            transition: background-color 0.2s ease;
+        }
+
+
+        .question-text {
+            flex: 1;
+            padding-right: 20px;
+            font-family: Aventa-Bold, sans-serif;
+            font-size: 18.9722px;
+            font-weight: 550;
+            line-height: 26.5611px;
+            color: rgb(9, 34, 86);
+        }
+
+        .question-icon {
+            transition: transform 0.3s ease;
+            font-size: 14px;
+        }
+
+        .question-item.active .question-icon {
+            color: #3b82f6;
+            transform: rotate(180deg);
+        }
+
+        /* Answer Content */
+        .answer-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .question-item.active .answer-content {
+            max-height: 300px; /* Adjust this value based on your content */
+        }
+
+        .answer-text {
+            padding: 0 24px 20px 24px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
+        /* Experience Section */
+.experience-section {
+    width: 100%;
+    padding: 120px 20px;
+    background: radial-gradient(circle at center,
+        #0846C3 0%,
+        #0638AE 35%,
+        #042E99 55%,
+        #0638AE 75%,
+        #0A51E0 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    max-height: 300px;
+}
+
+.experience-content h2 {
+    font-family: Aventa-Bold, sans-serif;
+    font-size: 36.0472px;
+    font-weight: 600;
+    line-height: 40.3729px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+}
+
+.exp-btn {
+    background: #FFF3C9; /* soft cream like screenshot */
+    color: #0A1935;
+    padding: 14px 34px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.exp-btn:hover {
+    background: #f5e7b5;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.footer {
+    background-color: rgb(3, 10, 28);
+    color: #ffffff;
+    padding: 3rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    margin-top: -50px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+.footer-image {
+   margin-left: -10px;
+}
+
+
+.footer-tagline {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: -20px;
+}
+
+.footer-description {
+    font-family: "Inter var", sans-serif;
+    font-size: 13.2806px;
+    font-weight: 500;
+    line-height: 20.8505px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    margin-top: -70px;
+    max-width: 350px;
+}
+
+.app-download {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-button-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.app-button-footer:hover {
+    background: #444;
+}
+
+.app-icon {
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 70px ;
+}
+
+.link-column h3 {
+    font-family: "Inter var", sans-serif;
+    font-size: 15.1778px;
+    font-weight: 500;
+    line-height: 28.0789px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.link-column ul {
+    list-style: none;
+}
+
+.link-column li {
+    margin-bottom: 0.75rem;
+    width: 150px;
+}
+
+.link-column a {
+    font-family: "Inter var", sans-serif;
+    font-size: 15.1778px;
+    font-weight: 500;
+    line-height: 21.2489px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-column a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: none;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-legal a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
+
+.footer-contact {
+    padding-top: 2rem;
+    border-top: none !important;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.address p,
+.contact-details p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.email,
+.phone {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.social-connect h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0.5rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.social-link:hover {
+    background: #444;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: none;
+}
+
+.copyright {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+    color: #888;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.footer-disclaimer p {
+    margin-bottom: 0;
+}
+.footer-contact {
+    padding-top: 2rem;
+    /* border-top: 1px solid #333; */
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-left {
+    text-align: left;
+}
+
+.address p,
+.contact-details p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.email,
+.phone {
+    color: #fff !important;
+    font-weight: 500; 
+}
+
+.social-connect {
+    text-align: center;
+}
+
+.social-connect h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: rgb(3, 10, 28);
+    text-decoration: none;
+    font-size: 0.8rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.contact-right {
+    /* Empty column for layout balance */
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-bottom-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-disclaimer {
+    color: #888;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    width: 100%;
+    margin-top: 0; /* Remove any top margin */
+}
+
+.footer-disclaimer p {
+    margin: 0;
+}
+
+.copyright {
+    color: #888;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+.footer-legal a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
+
+.footer-disclaimer {
+    color: #888;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.footer-disclaimer p {
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    /* Header */
+    .header {
+        padding: 16px 20px;
+    }
+    
+    .left-section {
+        gap: 20px;
+    }
+    
+    .nav-buttons {
+        gap: 15px;
+    }
+    
+    .right-section {
+        gap: 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-description {
+        width: 100%;
+        margin: 0 auto 30px;
+    }
+    
+    .hero-image img {
+        max-width: 80%;
+    }
+    
+    /* Benefits Section */
+    .benefits-section {
+        padding: 60px 20px;
+    }
+    
+    .benefits-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .benefits-left {
+        position: relative;
+        text-align: center;
+    }
+    
+    .benefits-grid,
+    .benefits-grid-second {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .benefit-card,
+    .benefit-card-second {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .benefit-card-title,
+    .benefit-card-description,
+    .benefit-card-title-second,
+    .benefit-card-description-second {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .benefit-img,
+    .benefit-img-second {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Steps Section */
+    .steps-wrapper {
+        padding: 80px 20px;
+    }
+    
+    /* Additional Services */
+    .additional-services {
+        padding: 60px 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-left: 0;
+    }
+    
+    .service-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .card-title {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .card-description {
+        width: 100%;
+    }
+    
+    .section-main-title,
+    .section-subtitle {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    /* FAQ Section */
+    .questions-section {
+        padding: 60px 20px;
+    }
+    
+    .question-button {
+        padding: 20px 25px;
+    }
+    
+    /* Trust & Experience Sections */
+    .trust-padd,
+    .experience-section {
+        padding: 80px 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 3rem 1rem 2rem;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 1.5rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile Screens (576px - 768px) */
+@media (max-width: 768px) {
+    /* Header - Only logo and hamburger menu */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    /* Hide everything except logo in left section */
+    .nav-buttons {
+        display: none !important;
+    }
+    
+    /* Hide everything in right section except hamburger */
+    .right-section {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links,
+    .utils-section {
+        display: none !important;
+    }
+    
+    /* Add hamburger menu */
+    .right-section::before {
+        content: "☰";
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+    }
+    
+    /* Hero Section - Hide hero image */
+    .hero-section {
+        padding: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-image {
+        display: none !important;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .app-buttons {
+        justify-content: center;
+    }
+
+    .trust-badges{
+        display: flex !important;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    
+    .trust-logo {
+
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Benefits Section - Cover whole screen */
+    .benefits-section {
+        padding: 40px 0 !important;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .benefits-container {
+        padding: 0 20px;
+    }
+    
+    .benefits-content {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .benefits-left {
+        padding: 0 15px;
+        text-align: left;
+    }
+    
+    .benefits-title {
+        font-size: 42px;
+        line-height: 1.1;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .gradient-text {
+        font-size: 42px;
+    }
+    
+    .get-started-btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+        /* margin-top: -100px; */
+    }
+    
+    .benefits-grid,
+    .benefits-grid-second {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .benefit-column,
+    .benefit-column-second {
+        width: 100%;
+    }
+    
+    .benefit-card,
+    .benefit-card-second {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .benefit-card-title,
+    .benefit-card-title-second {
+        font-size: 24px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .benefit-card-description,
+    .benefit-card-description-second {
+        font-size: 16px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .benefit-img,
+    .benefit-img-second {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Steps Section */
+    .steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .step {
+        width: 100%;
+    }
+    
+    .line {
+        display: none;
+    }
+    
+    /* Account Section */
+    .account-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    /* Additional Services */
+    .additional-services {
+        padding: 40px 20px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    
+    .services-container {
+        padding: 0 20px;
+    }
+    
+    /* FAQ Section */
+    .section-heading {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .section-main-title{
+        margin-top: 30px;
+    }
+    
+    .section-subtitle{
+        margin-top: 40px;
+    }
+    .question-text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Footer */
+    .footer-links {
+        /* grid-template-columns: 1fr; */
+        /* display: flex; */
+    }
+    
+    .footer-bottom-top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Screens (up to 576px) */
+@media (max-width: 576px) {
+    /* Header */
+    .header {
+        padding: 12px 15px;
+    }
+    
+    .logo img {
+        height: 25px;
+    }
+    
+    .right-section::before {
+        font-size: 24px;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 30px;
+        text-align: left;
+    }
+    
+    .hero-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+        text-align: left;
+    }
+    
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .app-store-img,
+    .play-store-img {
+        height: 40px;
+    }
+
+    .app-button{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Benefits Section - Full width with no side space */
+    .benefits-section {
+        padding: 30px 0 !important;
+    }
+    
+    .benefits-container {
+        padding: 0 15px;
+    }
+    
+    .benefits-title {
+        font-size: 36px;
+    }
+    
+    .gradient-text {
+        font-size: 36px;
+    }
+    
+    .get-started-btn {
+        padding: 15px;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .benefit-card-title,
+    .benefit-card-title-second {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+    
+    .benefit-card-description,
+    .benefit-card-description-second {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    /* Additional Services */
+    .additional-services {
+        padding: 30px 0;
+    }
+    
+    .services-container {
+        padding: 0 15px;
+    }
+    
+    .section-main-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    .card-title {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    
+    .card-description {
+        font-size: 16px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+        width: 100%;
+    }
+    
+    /* Trust & Experience Sections */
+    .trust-content h2,
+    .experience-content h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .trust-btn,
+    .exp-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+    
+    /* FAQ Section */
+    .questions-section {
+        padding: 40px 15px;
+    }
+    
+    .section-heading {
+        font-size: 32px;
+    }
+    
+    .question-button {
+        padding: 15px 20px;
+    }
+    
+    .question-text {
+        font-size: 15px;
+    }
+    
+    .answer-text {
+        font-size: 14px;
+        padding: 0 20px 15px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 2rem 15px;
+    }
+    
+    .footer-description {
+        font-size: 14px;
+    }
+    
+    .app-button-footer {
+        padding: 8px 15px;
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-link {
+        padding: 8px;
+        margin: 5px;
+    }
+}
+
+/* Extra Small Screens (up to 400px) */
+@media (max-width: 400px) {
+    /* Benefits Section - Even more compact */
+    .benefits-section {
+        padding: 25px 0 !important;
+    }
+    
+    .benefits-container {
+        padding: 0 10px;
+    }
+    
+    .benefits-title {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .gradient-text {
+        font-size: 32px;
+    }
+    
+    .hero-title {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+    
+    .section-heading {
+        font-size: 28px;
+    }
+    
+    .question-text {
+        font-size: 14px;
+    }
+    
+    .app-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-left: -10px;
+    }
+
+    .trust-title{
+        margin-left: -10px;
+    }
+    
+    .trust-badges {
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 5px;
+        margin-top: auto;
+    }
+    
+    .trust-logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Additional Services */
+    .additional-services {
+        padding: 25px 0;
+    }
+    
+    .services-container {
+        padding: 0 10px;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+    }
+    .footer-links{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom-top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+}
+
+/* Landscape Mode for Tablets */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .hero-content {
+        max-width: 50%;
+    }
+    
+    .hero-description {
+        width: 100%;
+    }
+    
+    .hero-image {
+        display: block !important;
+    }
+    
+    .hero-image img {
+        max-width: 90%;
+    }
+    .section-subtitle{
+        margin-top: 40px;
+    }
+    .benefits-section{
+        justify-content: center;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for overflow issues on mobile */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .benefits-section,
+    .additional-services,
+    .questions-section,
+    .steps-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
